@@ -18,4 +18,4 @@ import React from 'react'
 
 // ReactDOM.render(<SearchField name='Bob' />, rootElement);
 
-export default Seacrh;
+export default Search;
