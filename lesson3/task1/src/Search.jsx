@@ -1,6 +1,6 @@
-import './search.scss';
+import React from 'react'
 
-const rootElement = document.querySelector('#root');
+// const rootElement = document.querySelector('#root');
 
  const Search = (props) => {
      console.log(props);
@@ -16,4 +16,6 @@ const rootElement = document.querySelector('#root');
 };
 
 
-ReactDOM.render(<SearchField name='Bob' />, rootElement);
+// ReactDOM.render(<SearchField name='Bob' />, rootElement);
+
+export default Seacrh;
