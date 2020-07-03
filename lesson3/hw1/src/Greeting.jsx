@@ -4,12 +4,10 @@ import ReactDOM from "react-dom";
 
 
 const Greeting = (props) => {
-    const age = (new Date() - new Date(props.birthDate));
+    const age = new Date(props.birthDate).getDays().getFullYear()
   return (
     <div className='greeting'>
-      {`My name is ${props.firstName} ${props.lastName}. I'm ${age(
-        props.birthDate
-      )} years old`}
+      {`My name is ${props.firstName} ${props.lastName}. I'm ${age} years old`}
     </div>
   );
 };
