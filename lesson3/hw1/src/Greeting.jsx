@@ -9,7 +9,7 @@ const birthDate = (date) => moment(date).format("DD MMM YY");
 
 //   return (
 //     <div className="greeting">
-//       {`My name is ${props.firstName} ${props.lastName}. I'm ${birthDate} years old`}
+//       {`My name is ${props.firstName} ${props.lastName}. I'm ${birthDate(props.userData.birthDate} years old`}
 //     </div>
 //   );
 // };
@@ -21,8 +21,7 @@ const birthDate = (date) => moment(date).format("DD MMM YY");
 const Greeting = (props) => {
     return (
       <>
-        <div className='greeting'>{`Was born ${birthDate(props.userData.birthDate)} in ${
-          props.userData.birthPlace}`}</div>
+        <div className='greeting'>{`My name is ${props.firstName} ${props.lastName}. I'm ${birthDate(props.userData.birthDate)} years old`}</div>
       </>
     );
   };
