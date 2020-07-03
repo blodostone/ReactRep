@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 const birthD = (birthDate) => {
   ageInMiliSec = 31536000000;
-  return Math.floor((new Date() - new Date(birthDate)) / YearMs);
+  return Math.floor((new Date() - new Date(birthDate)) / ageInMiliSec);
 };
 
 
