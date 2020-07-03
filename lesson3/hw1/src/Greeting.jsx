@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const birthDate = new Date(props.birthDate).getFullYear().getDays()
 
 const Greeting = (props) => {
 
