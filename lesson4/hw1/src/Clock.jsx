@@ -9,6 +9,7 @@ class Clock extends Component {
   constructor(props) {
       super(props);
       this.state = {
+        offset: props.offset,
         time: this.state.time.getTimezoneOffset()
     };
     
