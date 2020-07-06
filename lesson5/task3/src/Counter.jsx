@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Counter extends Component {
+class Counter extends React.Component {
     constructor(props) {
         super(props);
 
@@ -9,6 +9,7 @@ class Counter extends Component {
         };
 
         this.decrement = this.decrement.bind(this);
+        this.increment = this.increment.bind(this)
     }
 
     decrement() {
