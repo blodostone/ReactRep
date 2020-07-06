@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './clock.scss';
-// import getTimeWithOffset from './getTimeWithOffset.js';
+import getTimeWithOffset from './getTimeWithOffset.js';
 import moment from 'moment';
 
 
@@ -9,13 +9,14 @@ class Clock extends Component {
   constructor(props) {
       super(props);
       this.state = {
+        location: props.city,
         offset: props.offset,
-        time: this.state.time.getTimezoneOffset()
+        time: getTimeWithOffset(this.props.offset)
     };
     
     setInterval(() => {
       this.setState({
-        time: this.state.time.getTimezoneOffset()
+        time: getTimeWithOffset(this.props.offset)
       }) 
     }, 1000);
   };
