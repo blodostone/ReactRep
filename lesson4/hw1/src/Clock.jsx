@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './clock.scss';
-import getTimeWithOffset from './getTimeWithOffset.js';
+import getTimeWithOffset from './getTimeWithOffset.jsx';
 import moment from 'moment';
 
 
