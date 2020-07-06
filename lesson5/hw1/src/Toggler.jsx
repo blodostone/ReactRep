@@ -36,7 +36,7 @@ class Toggler extends React.Component {
 
     render() {
         return(
-            <div className = 'togglerBtn'>
+            <div>
                 <button 
                 onClick={() => this.setBodyTurnOn()}
                 className = 'togglers__button'> 
