@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 
-// const GREEN = '#0f0';
-// const BLUE = '#00f';
+const GREEN = '#0f0';
+const BLUE = '#00f';
 
 
 class Toggler extends React.Component {
@@ -11,7 +11,7 @@ class Toggler extends React.Component {
 
         this.state = {
             toggler: 'Off',
-            // color: "GREEN"
+            color: "GREEN"
         };
     }
 
@@ -19,11 +19,13 @@ class Toggler extends React.Component {
         // console.log(e)
         if(this.state.toggler == 'Off') {
             this.setState({
-                toggler: this.state.toggler = 'On'
+                toggler: this.state.toggler = 'On',
+                color: document.body.style.backgroundColor = BLUE,
             });
         } else {
             this.setState({
-                toggler: this.state.toggler = 'Off'
+                toggler: this.state.toggler = 'Off',
+                color: document.body.style.backgroundColor = GREEN,
             });
         };
 
@@ -37,7 +39,8 @@ class Toggler extends React.Component {
             <div className = 'togglerBtn'>
                 <button 
                 onClick={() => this.setBodyTurnOn()}
-                className = 'togglers__button'> {this.state.toggler}
+                className = 'togglers__button'> 
+                {this.state.toggler}
                     
                 </button>
             </div>
