@@ -30,7 +30,7 @@ class ColorPicker extends React.Component {
     render() {
         return(
             <div>
-                <div class="picker__title">
+                <div className="picker__title">
                     {this.state.title}
                 </div>
                 <div>
