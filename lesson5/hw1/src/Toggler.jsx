@@ -4,7 +4,7 @@ import React from 'react';
 
 class Toggler extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
             toggler: 'Off',
@@ -32,7 +32,7 @@ class Toggler extends React.Component {
         return(
             <div>
                 <button 
-                onClick={() => this.setBodyTurnOn()}
+                onClick={this.setBodyTurnOn()}
                 className = 'togglers__button'> 
                 {this.state.toggler}
                     
