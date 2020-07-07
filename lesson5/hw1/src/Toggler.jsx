@@ -1,9 +1,6 @@
 import React from 'react';
 
 
-const GREEN = '#0f0';
-const BLUE = '#00f';
-
 
 class Toggler extends React.Component {
     constructor(props) {
@@ -11,7 +8,6 @@ class Toggler extends React.Component {
 
         this.state = {
             toggler: 'Off',
-            color: "GREEN"
         };
     }
 
@@ -20,12 +16,10 @@ class Toggler extends React.Component {
         if(this.state.toggler == 'Off') {
             this.setState({
                 toggler: this.state.toggler = 'On',
-                color: document.body.style.backgroundColor = BLUE,
             });
         } else {
             this.setState({
                 toggler: this.state.toggler = 'Off',
-                color: document.body.style.backgroundColor = GREEN,
             });
         };
 
