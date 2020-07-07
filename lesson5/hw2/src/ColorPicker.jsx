@@ -8,8 +8,9 @@ class ColorPicker extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: null
+            title: 'Red'
         };
+        console.log(this.state.title)
     };
 
     ChangeColorText = (text) => {
@@ -35,18 +36,18 @@ class ColorPicker extends React.Component {
                 <div>
                     <button 
                         onMouseOver={() => this.ChangeColorText('Coral')}
-                        onMouseOut={() => this.resetText('Coral')}
+                        onMouseOut={() => this.resetText()}
                         class="picker__button picker__button_coral">
 
                     </button>
                     <button 
                         onMouseOver={() => this.ChangeColorText('Aqua')}
-                        onMouseOut={() => this.resetText('Aqua')}
+                        onMouseOut={() => this.resetText()}
                         class="picker__button picker__button_aqua">
                     </button>
                     <button 
                         onMouseOver={() => this.ChangeColorText('Bisque')}
-                        onMouseOut={() => this.resetText('Bisque')}
+                        onMouseOut={() => this.resetText()}
                         class="picker__button picker__button_bisque">
                     </button>
                 </div>
