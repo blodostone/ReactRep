@@ -32,7 +32,7 @@ class Toggler extends React.Component {
         return(
             <div>
                 <button 
-                onClick={this.setBodyTurnOn()}
+                onClick={this.setBodyTurnOn}
                 className = 'togglers__button'> 
                 {this.state.toggler}
                     
