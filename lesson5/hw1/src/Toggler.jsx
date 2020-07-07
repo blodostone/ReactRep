@@ -7,10 +7,12 @@ class Toggler extends React.Component {
         super(props)
 
         this.state = {
-            toggler: this.state.toggler = 'Off'
+            toggler: 'Off'
         };
+        console.log(this.state.toggler)
     }
 
+    debugger
     setBodyTurnOn = () => {
         // console.log(e)
         if(this.state.toggler == 'Off') {
@@ -33,12 +35,11 @@ class Toggler extends React.Component {
             <div>
                 <button 
                 onClick={() => this.setBodyTurnOn()}
-                className = 'togglers__button'> 
+                className = 'toggler'> 
                 {this.state.toggler}
                     
                 </button>
             </div>
-
         )
     }
 }
