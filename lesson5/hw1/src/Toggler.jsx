@@ -7,7 +7,7 @@ class Toggler extends React.Component {
         super(props)
 
         this.state = {
-            toggler: false
+            toggler: this.state.toggler = 'Off'
         };
     }
 
