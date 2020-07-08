@@ -9,7 +9,7 @@ class Toggler extends React.Component {
         this.state = {
             toggler: 'Off'
         };
-        console.log(this.state.toggler)
+        // console.log(this.state.toggler)
     }
 
     debugger
@@ -17,11 +17,11 @@ class Toggler extends React.Component {
         // console.log(e)
         if(this.state.toggler == 'Off') {
             this.setState({
-                toggler: this.state.toggler = 'On',
+                toggler:'On',
             });
         } else {
             this.setState({
-                toggler: this.state.toggler = 'Off',
+                toggler:'Off',
             });
         };
 
