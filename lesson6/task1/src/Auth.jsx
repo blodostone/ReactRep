@@ -1,9 +1,9 @@
 import React from 'react';
-import Greeting from './Greeting';
-import Login from "./Login";
-import Logout from "./Logout";
+import Greeting from './Greeting.jsx';
+import Login from "./Login.jsx";
+import Logout from "./Logout.jsx";
 
-class Auth extends Component {
+class Auth extends React.Component {
 
     constructor (props) {
         super(props);
