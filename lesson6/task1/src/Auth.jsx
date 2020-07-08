@@ -1,5 +1,7 @@
 import React from 'react';
 import Greeting from './Greeting';
+import Login from "./Login";
+import Logout from "./Logout";
 
 class Auth extends Component {
 
@@ -7,7 +9,7 @@ class Auth extends Component {
         super(props);
 
         this.state = {
-            isLoggedIn: true
+            isLoggedIn: false
         };
     }
 
@@ -37,12 +39,13 @@ class Auth extends Component {
         // }
         return (
             <div className="panel">
-                <Greeting isLoggedIn ={this.state.isLoggedIn}/>
-                <div>
-                    <button onClick={this.handleLogin}>Login</button>
-                    <button onClick={this.handleLogout}>Logout</button>
-                </div>
-            </div>
+            <Greeting isLoggedIn={this.state.isLoggedIn} />
+            {this.state.isLoggedIn ? (
+              <Logout onLogout={this.handleLogout} />
+            ) : (
+              <Login onLogin={this.handleLogin} />
+            )}
+          </div>
         )
 
         
