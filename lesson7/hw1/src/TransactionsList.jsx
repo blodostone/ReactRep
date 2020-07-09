@@ -10,12 +10,14 @@ class TransactionsList extends React.Component {
 
 
     render() {
-        <div>
-            <ul className="transactions">
-                {transactions.map(transactions => (
-                <Transaction key={transactions.id} {...transactions} />))}
-            </ul>
-      </div>
+        return (
+            <div>
+                <ul className="transactions">
+                    {transactions.map(transactions => (
+                    <Transaction key={transactions.id} {...transactions} />))}
+                </ul>
+            </div>
+        )
     }
 
 }
