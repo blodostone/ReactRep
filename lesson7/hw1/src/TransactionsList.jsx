@@ -10,6 +10,7 @@ class TransactionsList extends React.Component {
 
 
     render() {
+        const {transactions} = this.props;
         return (
             <div>
                 <ul className="transactions">
