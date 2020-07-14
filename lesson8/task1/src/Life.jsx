@@ -4,34 +4,32 @@ import React from 'react';
 class Life extends React.Component {
     constructor(props) {
         super(props);
-        console.log('good place to create state');
+        console.log('constructor: good place to create state');
     }
 
     componentDidMount() {
-        console.log('API calls, subscriptions');
+        console.log('componentDidMount: API calls, subscriptions');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log(nextProps, nextState);
-        console.log('decide to render or not to render');
+        console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
         return nextProps.number % 2;
 
         
     }
 
     componentDidUpdate(prevProps, revState) {
-        console.los(prevProps);
-        console.log('some updates based on new props')
+        console.log('componentDidUpdate(prevProps, prevState): some updates based on new props')
     }
 
     componentWillUnmount() {
-        console.log('cleanup DOM related to component will be removed');
+        console.log('componentWillUnmount(): cleanup DOM related to component will be removed');
     }
 
 
     render() {
-        console.log('React element to build DOM');
-        return <div className="number">{this.props.number}</div>
+        console.log('return React element to build DOM');
+        return <div>Hi</div>
     }
 }
 
