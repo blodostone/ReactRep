@@ -13,6 +13,7 @@ class Life extends React.Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
+        return true;
     }
 
     componentDidUpdate(prevProps, revState) {
@@ -20,7 +21,7 @@ class Life extends React.Component {
     }
 
     componentWillUnmount() {
-        console.log('componentWillUnmount(): cleanup DOM related to component will be removed');
+        console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
     }
 
 
