@@ -19,7 +19,7 @@ class UserForm extends React.Component {
       <form
         ref={this.setRef}
         className="login-form"
-        onSubmit={this.handleSumbit}
+        onSubmit={this.onSubmit}
       >
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
