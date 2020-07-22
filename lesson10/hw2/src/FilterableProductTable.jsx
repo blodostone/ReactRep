@@ -9,19 +9,22 @@ class FilterableProductTable extends Component {
       filterText: "",
       inStockOnly: false,
     };
+
+    // this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
+    // this.handleInStockChange = this.handleInStockChange.bind(this);
   }
-
-  handleFilterTextChange = (event) => {
+  
+  handleFilterTextChange = (e) =>{
     this.setState({
-      filterText: event.target.value,
+      filterText: e.target.value,
     });
-  };
-
-  handleInStockChange = (event) => {
+  }
+  
+  handleInStockChange = (e) => {
     this.setState({
-      inStockOnly: event.target.checked,
-    });
-  };
+      inStockOnly: e.target.checked,
+    })
+  }
 
   render() {
     return (
