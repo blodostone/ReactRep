@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCategoryRow from './ProductCategoryRow';
 import ProductRow from './ProductRow';
 
-const ProductTable =({filterText, inStockOnly, products }) => {
+const ProductTable = ({filterText, inStockOnly, products }) => {
 
         const rows = [];
         let lastCategory = null;
