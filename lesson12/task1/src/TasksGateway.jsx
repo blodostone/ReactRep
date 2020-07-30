@@ -4,7 +4,7 @@ export const createTask = taskData => {
     return fetch(baseUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json;charset=utf-8',
+            'Content-Type': 'application/json;utf-8',
         },
         body: JSON.stringify(taskData)
     }).then(response => {
@@ -20,12 +20,6 @@ export const fetchTasksList = () => {
             return response.json()
         }
     })
-        .then(tasksList => {
-            return tasksList.map(({ _id, ...task }) => ({
-                id: _id,
-                ...task,
-            }))
-        })
 }
 
 
@@ -38,7 +32,7 @@ export const updatedTask = (taskId, taskData) => {
         body: JSON.stringify(taskData)
     }).then(response => {
         if (!response.ok) {
-            throw new Error('Faild to create task')
+            throw new Error('Failed to change status of task')
         } 
     });
 }
