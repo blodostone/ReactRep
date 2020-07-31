@@ -41,13 +41,8 @@ class TasksList extends React.Component {
             ...text,
             done: !done
         };
-
         updatedTask(id, upTask)
-            .then(() => this.fetchTasks())
-
-
-
-            
+            .then(() => this.hetchTasks())       
     };
 
     handleTaskDelete = id => {
