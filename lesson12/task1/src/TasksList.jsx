@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 import CreateTaskInput from './CreateTaskInput'
-import { createTask, fetchTasksList, updatedTask, deleteTask } from './tasksGateway'
+import { createTask, fetchTasksList, updateTask, deleteTask } from './tasksGateway'
 
 
 
@@ -37,6 +37,11 @@ class TasksList extends React.Component {
             done: !done,
         };
         updateTask(id, updatedTask).then(() => this.fetchTasks());
+    };
+
+    handleTaskDelete = id => {
+        deleteTask(id)
+            .then(() => this.fetchTasks());
     };
 
     handleTaskDelete = id => {
